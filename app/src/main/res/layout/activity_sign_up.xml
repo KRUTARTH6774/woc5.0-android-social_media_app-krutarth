@@ -5,30 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#4F6092"
-    tools:context=".MainActivity">
+    tools:context=".SIGN_UP">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:orientation="vertical">
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="40dp"
             android:gravity="center"
-            android:text="SIGN IN"
+            android:text="SIGN UP"
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextNumberSigned"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Contact No."
+            android:inputType="numberSigned" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -36,7 +47,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/editTextTextPassword2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -44,70 +55,65 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/SignInButton"
+            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SIGN IN" />
+            android:text="Sign UP" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/GoogleSubmitButton"
+                android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_weight="1"
                 android:text="Google" />
 
             <Button
-                android:id="@+id/FaceBookSubmitButton"
+                android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Facebook" />
+                android:layout_weight="1"
+                android:text="FaceBook" />
+
         </LinearLayout>
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="#640606"
-            android:hapticFeedbackEnabled="false"
-            android:text="Sign In Using Phone "
-            android:textColor="#000000"
-            app:backgroundTint="#4F6092"
-            app:iconTint="#B16464"
-            app:rippleColor="#B83030" />
+            android:text="Sign Up Using Phone"
+            app:backgroundTint="#4F6092" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center|center_horizontal"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dosen't Have AN Account ?" />
+                android:layout_weight="1"
+                android:text="Already Have An Account ?" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/button7"
                 android:layout_width="wrap_content"
                 android:layout_height="34dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginLeft="4dp"
-                android:text="Sign UP"
-                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:onClick="GoToSignInPage"
+                android:text="Sign IN"
                 android:textSize="8sp"
                 app:backgroundTint="#7F2B2B" />
         </LinearLayout>
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
